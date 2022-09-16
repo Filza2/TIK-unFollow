@@ -1,5 +1,5 @@
 try:from requests import get,post;from time import sleep;import re
-except ModuleNotFoundError:exit('[!] Download The Missing Module !')
+except Exception as e:print(f'[!] Download The Missing Module ! , {e}');exit()
 def Delete_Follower(JQ,sis): 
     sleep(5)
     rq=post(f"https://www.tiktok.com/api/commit/follow/user/?aid=1988&user_id={JQ}",headers={'Host': 'www.tiktok.com','Cookie':  f'sessionid={sis}; csrf_session_id=2ac85fd70e3ce31e66b24c20b7ac1c33','User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0','Accept': '*/*','Accept-Language': 'ar,en-US;q=0.7,en;q=0.3','Accept-Encoding': 'gzip, deflate','Content-Type': 'application/x-www-form-urlencoded','Content-Length': '0','X-Secsdk-Csrf-Token': '00010000000116d755acebcd6d5281dc5cce93f28fbcacaab53421ab7960847e4a213d2b12611713e42388e6792b','Origin': 'https://www.tiktok.com','Sec-Fetch-Dest': 'empty','Sec-Fetch-Mode': 'cors','Sec-Fetch-Site': 'same-origin','Te': 'trailers'})
